@@ -97,11 +97,3 @@ This was a hackathon build, and it shows in a few specific places:
 - **`server.js` (the 3D-model listing service) is dead code.** It references undefined variables and would throw if called; the frontend loads models from static paths instead.
 
 ---
-
-
-```js
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-```
-
----
-

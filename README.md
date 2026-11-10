@@ -108,12 +108,3 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 ---
 
-## My role
-
-I contributed across the frontend, the 3D/AR layer and the Gemini backend, but the piece I owned was the **Manim content and model-training work** behind Phase 1.
-
-This was early 2024, when Gemini was brand new and nobody had settled patterns for getting usable code out of it. I used it to generate Manim animation code across a wide span of topics — geometry, calculus, complex numbers, orbital mechanics, wave interference, neural network forward passes, RSA — then reviewed, corrected and rendered each one, building up the library of 43 working animations.
-
-From that work I assembled the **fine-tuning dataset** of prompt-to-code pairs (maintained in both a chat-style `messages` format and a flat `input_text`/`output_text` format, to suit different tuning APIs) and trained a model on it to try to make the code generation dependable enough to demo live. It didn't reach that bar — generated scenes failed to render too often — and we eventually moved to the curated-asset approach that is live today. The dataset and animation library stayed in use for a while before that pivot.
-
-Knowing where the generative approach broke down is what made the Phase 2 decision an easy one: use the model for what it was reliable at (explanations) and pre-produce what it wasn't (the visuals).

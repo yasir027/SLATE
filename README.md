@@ -98,9 +98,6 @@ This was a hackathon build, and it shows in a few specific places:
 
 ---
 
-## Security note
-
-An earlier commit contains a **hardcoded Google Gemini API key** in `geminiserver.js`. Even though the key now appears inactive, it remains in the git history. It should be revoked in Google Cloud, and the key loaded from an environment variable instead:
 
 ```js
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
